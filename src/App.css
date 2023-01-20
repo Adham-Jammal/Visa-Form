@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+html, body, #root,  #app , #app>div {
+  height: 100%
+}
+.container{
+  max-height: 100%;
+  overflow-y: scroll;
+}
+.main{
+    margin-top: 120px;
+    padding: 25px;
+    padding-top: 170px;
+    background-color: #fff;
+    position: relative;
+    width: 700px;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, 0);
+}
+label{
+    display: inline-block;
+    text-transform: uppercase;
+    display: block;
+    color: #777;
+    font-size: 1rem;
+}
+input , select{
+    margin: 0;
+    padding: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #777;
+}
+p ,span{
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+}
+form .form-col{
+    margin: 10px 0;
+}
+form button{
+    font-weight: 200;
+    width: 60% !important;
+    margin: 20px auto 0 auto !important;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    background: rgb(142,167,233);
+    background: linear-gradient(315deg, rgba(142,167,233,1) 0%, rgba(114,134,211,1) 56%);
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px;
+    transition: .5s;
+}
+form button:hover{
+  transform: scale(1.05);
+}
+/* Card */
+.cardWrapper{
+    background-color: none;
+    height: 300px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -120px;
+    border-radius: 8px;
+}
+.visaCard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+.flipCard {
+    transform: rotateY(180deg);
+  }
+.visaCard .front{
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        backface-visibility: hidden;
+        overflow: hidden;
+        background: rgb(142,167,233);
+        background: linear-gradient(315deg, rgba(142,167,233,1) 0%, rgba(114,134,211,1) 56%);
+        color: #000;
+}
+.visaCard .back{
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: rgb(142,167,233);
+    background: linear-gradient(315deg, rgba(142,167,233,1) 0%, rgba(114,134,211,1) 56%);
+    text-align: center;
+    transform: rotateY(180deg);
+  }
+  .visaCard .back hr{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    top: 25px;
+    left: 0;
+    opacity: 1;
+  }
+  .visaCard .back .content{
+    position: relative;
+    top: 100px;
+  }
+  .visaCard .back .content h3{
+    text-align: left;
+  }
+  .visaCard .back p{
+    text-align: left;
+    background-color: #FFF2F2;
+    padding: 5px;
+    height: 40px;
+    border-radius: 4px;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .visaCard .back img{
+    display: block;
+    width: 50px;
+    margin: 0 0 0 auto;
+  }
+.visaCard .row{
+    margin: 20px 0;
+}
+.visaCard  img{
+    width: 40%;
+}
+.visaCard .visaSquare{
+  width: 50px;
+  height: 50px;
+  background-color: #fdda8e;
+  border-radius: 4px;
+}
+.visaCard h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+}
+.visaCard p{
+    font-size: 1.4rem;
+    color: #fff;
+    overflow: hidden;
+    font-weight: 200;
+}
+.visaCard .cardHolderName{
+  text-transform: capitalize;
+}
+.visaCard .expiration{
+    text-align: right;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* Responsive */
+@media (max-width : 767px){
+  .main{
+    width: 90vw;
+  }
+  .cardWrapper{
+    width: 100%;
+  } 
+  .visaCard p{
+    font-size: 1.2rem;
+  }
+  .visaCard img{
+    width: 60%;
+    height: auto;
+  }
+  .visaCard .visaSquare{
+    width: 40px;
+    height: 40px;
+  }
+  p , span ,.visaCard h3{
+    font-size: .8rem;
+  }
+}
